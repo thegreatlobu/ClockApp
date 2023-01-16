@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimerActivity">
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:id="@+id/chronometer"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startTimer"
+        android:src="@drawable/ic_play"
+        android:layout_below="@id/chronometer"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@id/stopTimer"
+        android:onClick="startChronometer"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopTimer"
+        android:src="@drawable/ic_pause"
+        android:layout_below="@id/chronometer"
+       android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:onClick="stopChronometer"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetTimer"
+        android:src="@drawable/ic_restart"
+        android:layout_below="@id/chronometer"
+        android:layout_toRightOf="@id/stopTimer"
+        android:layout_margin="10dp"
+        android:onClick="resetChronometer"/>
+
+</RelativeLayout>
